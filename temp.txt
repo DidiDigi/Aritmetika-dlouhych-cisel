@@ -1,0 +1,23 @@
+if ((indexV == 0) && (podteceni == 0))
+			{
+				//*cisliceV = 
+				Vrat(pVetsi, indexV, pCisliceV);
+				hodnota = atoi(pCisliceV) - podteceni;
+				if (hodnota < 0)
+					{
+						hodnota = hodnota + 10;
+						podteceni = 1;
+					}
+					else 
+						{
+							podteceni = 0;
+						};
+				sprintf(pCislice, "%i", hodnota);
+				VlozDoGumyZleva(pivot,indexV,(*pCislice));
+			};
+					
+		if ((indexV == 0) && (podteceni == 1))
+		{
+			VlozDoGumyZleva(pivot,indexV,'0');
+			//GumaOdeberZleva(pivot);	
+		};
